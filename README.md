@@ -31,6 +31,7 @@
 若要运行源码。可能需要的依赖：
 
 - selenium库
+- pyQt5
 - chromedriver
 
 
