@@ -2,8 +2,6 @@
 
 使用LaTeX编写论文时，需要使用BibTeX格式的参考文献。一开始使用chrome的google scholar button插件查找文献，每次都需要经过“搜索文献--》点击引用--》弹出‘APA’等格式的对话框--》点击对话框左下角的BibTeX--》弹出新网页，复制bibtex字段”，文献少的时候还能忍，多了就显得很麻烦，并且，搜索多了google还可能会弹出验证或直接封IP（血的教训）。
 
-
-
 尝试了微软学术、搜狗学术（竟然是调用的微软学术的api），搜索结果太杂。虽然知道了文献id，就可以直接通过api获得bibtex，但是有时候搜索结果的第一页都不是想要的，体验太差。
 
 于是转向百度，百度也是需要和google一样繁琐的步骤。无奈之下，决定自己造个轮子。检索文献，直接出来bibtex字段。
@@ -22,6 +20,20 @@
 
 4、输入框下方出现检索的bibtex结果，选中一栏，直接‘Ctrl+C’复制，就可以将bibtex字段粘贴到你需要粘贴的地方。
 
+## 可能出现的问题
+
+1、打开后闪退。
+
+可能是没有安装所需的库
+
+打开终端，安装selenium库，输入
+
+```python
+pip install selenium
+```
+
+下载 chromedriver（64位系统可能需要下载64位的版本），将chromedriver.exe放在python的Script文件夹里面，如果安装的是anaconda，则放在Anaconda3\Scripts文件夹里。
+
 
 
 ## 原理
@@ -30,9 +42,11 @@
 
 若要运行源码。可能需要的依赖：
 
-- selenium库
+- selenium
+- python3
 - pyQt5
 - chromedriver
+
 
 
 
